@@ -24,8 +24,8 @@ import org.umeframework.dora.ajax.AjaxRender;
 import org.umeframework.dora.cache.CacheManager;
 import org.umeframework.dora.message.MessageProperties;
 import org.umeframework.dora.service.BaseComponent;
-import org.umeframework.dora.service.user.UserCacheService;
-import org.umeframework.dora.service.user.UserLoginService;
+import org.umeframework.dora.web.user.UserCacheService;
+import org.umeframework.dora.web.user.UserLoginService;
 
 /** 
  * OAuth2.0用户鉴权服务逻辑实现.<br>

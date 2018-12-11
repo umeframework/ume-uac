@@ -7,12 +7,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
-import org.umeframework.dora.bean.BeanConfigConst;
 import org.umeframework.dora.cache.CacheManager;
 import org.umeframework.dora.cache.impl.TempMemoryCachedImpl;
+import org.umeframework.dora.contant.BeanConfigConst;
 import org.umeframework.dora.message.MessageProperties;
 import org.umeframework.dora.message.impl.MessagePropertiesImpl;
-import org.umeframework.dora.service.user.UserAuthenticator;
+import org.umeframework.dora.web.user.UserAuthenticator;
 import org.umeframework.uac.user.dto.UserAclDto;
 import org.umeframework.uac.user.impl.DefaultAuthenticatorImpl;
 

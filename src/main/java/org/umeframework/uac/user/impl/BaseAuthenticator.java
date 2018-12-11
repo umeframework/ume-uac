@@ -12,7 +12,7 @@ import java.util.Set;
 import org.umeframework.dora.bean.BeanUtil;
 import org.umeframework.dora.service.BaseDBComponent;
 import org.umeframework.dora.service.TableObject;
-import org.umeframework.dora.service.user.UserAuthenticator;
+import org.umeframework.dora.web.user.UserAuthenticator;
 import org.umeframework.uac.entity.UmeResourceDto;
 import org.umeframework.uac.entity.UmeRoleAclDto;
 import org.umeframework.uac.entity.UmeRoleDto;
@@ -56,7 +56,7 @@ public abstract class BaseAuthenticator<USER_DTO> extends BaseDBComponent implem
 	/**
 	 * 根据loginId，loginPassword等进行用户鉴权，并对获取用户进行授权处理后，返回UserAuthDto实体。<br>
 	 * 
-	 * @see org.umeframework.dora.service.user.UserAuthenticator#doAuthentication(java.lang.String, java.lang.String, java.lang.String[])
+	 * @see org.umeframework.dora.web.user.UserAuthenticator#doAuthentication(java.lang.String, java.lang.String, java.lang.String[])
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
