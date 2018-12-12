@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import org.umeframework.dora.bean.BeanValidator;
-import org.umeframework.dora.transaction.TransactionRequired;
+
 import org.umeframework.dora.service.BaseDBComponent;
 import org.umeframework.uac.entity.UmeRoleDto;
 import org.umeframework.uac.entity.crud.UmeRoleCrudService;
@@ -22,7 +22,7 @@ public class UmeRoleCrudServiceImpl extends BaseDBComponent implements UmeRoleCr
      * @see org.umeframework.uac.entity.crud.impl.UmeRoleCrudService#create
      */
     @Override
-    @TransactionRequired
+    
     public Integer create(UmeRoleDto entity) {
         validate(entity);
         if (entity.getCreateAuthor() == null) {
@@ -40,7 +40,7 @@ public class UmeRoleCrudServiceImpl extends BaseDBComponent implements UmeRoleCr
      * @see org.umeframework.uac.entity.crud.impl.UmeRoleCrudService#createList
      */
     @Override
-    @TransactionRequired
+    
     public List<Integer> createList(List<UmeRoleDto> entityList) {
         List<Integer> result = new ArrayList<Integer>(entityList.size());
         for (UmeRoleDto entity : entityList) {
@@ -54,7 +54,7 @@ public class UmeRoleCrudServiceImpl extends BaseDBComponent implements UmeRoleCr
      * @see org.umeframework.uac.entity.crud.impl.UmeRoleCrudService#createOrUpdate
      */
     @Override
-    @TransactionRequired
+    
     public Integer createOrUpdate(UmeRoleDto entity) {
         UmeRoleDto existed = super.getDao().queryForObject(UmeRoleDto.SQLID.FIND, entity, UmeRoleDto.class);
         if (existed == null) {
@@ -70,7 +70,7 @@ public class UmeRoleCrudServiceImpl extends BaseDBComponent implements UmeRoleCr
      * @see org.umeframework.uac.entity.crud.impl.UmeRoleCrudService#createOrUpdateList
      */
     @Override
-    @TransactionRequired
+    
     public List<Integer> createOrUpdateList(List<UmeRoleDto> entityList) {
         List<Integer> result = new ArrayList<Integer>(entityList.size());
         for (UmeRoleDto entity : entityList) {
@@ -84,7 +84,7 @@ public class UmeRoleCrudServiceImpl extends BaseDBComponent implements UmeRoleCr
      * @see org.umeframework.uac.entity.crud.impl.UmeRoleCrudService#update
      */
     @Override
-    @TransactionRequired
+    
     public Integer update(UmeRoleDto entity) {
         validate(entity);
         if (entity.getUpdateAuthor() == null) {
@@ -99,7 +99,7 @@ public class UmeRoleCrudServiceImpl extends BaseDBComponent implements UmeRoleCr
      * @see org.umeframework.uac.entity.crud.impl.UmeRoleCrudService#updateList
      */
     @Override
-    @TransactionRequired
+    
     public List<Integer> updateList(List<UmeRoleDto> entityList) {
         List<Integer> result = new ArrayList<Integer>(entityList.size());
         for (UmeRoleDto entity : entityList) {
@@ -113,7 +113,7 @@ public class UmeRoleCrudServiceImpl extends BaseDBComponent implements UmeRoleCr
      * @see org.umeframework.uac.entity.crud.impl.UmeRoleCrudService#delete
      */
     @Override
-    @TransactionRequired
+    
     public Integer delete(UmeRoleDto entity) {
         int result = super.getDao().update(UmeRoleDto.SQLID.DELETE, entity);
         return result;
@@ -124,7 +124,7 @@ public class UmeRoleCrudServiceImpl extends BaseDBComponent implements UmeRoleCr
      * @see org.umeframework.uac.entity.crud.impl.UmeRoleCrudService#deleteList
      */
     @Override
-    @TransactionRequired
+    
     public List<Integer> deleteList(List<UmeRoleDto> entityList) {
         List<Integer> result = new ArrayList<Integer>(entityList.size());
         for (UmeRoleDto entity : entityList) {
